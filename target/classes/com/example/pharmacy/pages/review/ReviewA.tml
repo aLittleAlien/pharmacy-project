@@ -1,0 +1,8 @@
+    		<html t:type="layout" title="Product manipulation"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+      <h1 class="title">Add Review</h1>
+    		<t:beaneditform t:id="review" object="review"/>
+
+</html>

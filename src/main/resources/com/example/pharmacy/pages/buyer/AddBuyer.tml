@@ -1,0 +1,18 @@
+<html t:type="layout" title="Home"
+      t:sidebarTitle="Content"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<t:beaneditform object="buyer" submitLabel="Add" reorder="name, lastname, username, password, email, age, aboutMe">
+		<p:password>
+			<t:label for="password">Password</t:label>
+			<t:passwordfield t:id="password" value="buyer.password"></t:passwordfield>
+		</p:password>
+		<p:aboutMe>
+			<t:label for="aboutMe">About me</t:label>
+			<t:textarea t:id="aboutMe" value="buyer.aboutMe"></t:textarea>
+		</p:aboutMe> 
+	</t:beaneditform>
+
+</html>

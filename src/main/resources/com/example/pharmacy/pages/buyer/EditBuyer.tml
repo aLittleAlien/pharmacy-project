@@ -1,0 +1,27 @@
+<html t:type="layout" title="Edit User"
+	t:sidebarTitle="Pages" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<t:zone t:id="zone">
+		<t:beaneditform t:id="buyer" object="buyer" submitLabel="Update">
+
+	<p:password>
+			<t:label for="password">Password</t:label>
+			<t:passwordfield t:id="password" value="buyer.password"></t:passwordfield>
+		</p:password>
+		<p:aboutMe>
+			<t:label for="aboutMe">About me</t:label>
+			<t:textarea t:id="aboutMe" value="buyer.aboutMe"></t:textarea>
+		</p:aboutMe>
+		</t:beaneditform>
+	</t:zone>
+	
+	<p:sidebar>
+         <p>
+        [
+         <t:pagelink page="buyer/ShowBuyer">Show Buyer</t:pagelink>
+        ]
+        </p>
+    </p:sidebar>
+
+</html>

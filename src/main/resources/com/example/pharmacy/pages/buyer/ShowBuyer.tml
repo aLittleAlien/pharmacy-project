@@ -1,0 +1,45 @@
+<html t:type="layout" title="Home"
+      t:sidebarTitle="Content"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+<body>
+	<table border="1">
+		<thead>
+				<tr>
+					<th>Id</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+					<th>Password</th>
+					<th>Email</th>
+					<th>Age</th>
+					<th>Email</th>
+					<th>Edit</th>
+					<th>Delete</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr t:type="Loop" t:source="buyers" t:value="buyer">
+					<td>${buyer.id}</td>
+					<td>${buyer.name}</td>
+					<td>${buyer.lastname}</td>
+					<td>${buyer.username}</td>
+					<td>${buyer.password}</td>
+					<td>${buyer.email}</td>
+					<td>${buyer.age}</td>
+					<td>${buyer.aboutMe}</td>
+					<td><t:pagelink page="buyer/EditBuyer" context="buyer.id">Edit</t:pagelink></td>
+					<td><t:actionlink t:id="delete" context="buyer.id">Delete</t:actionlink></td>
+					<td><t:pagelink page="buyer/Details" context="buyer.id">Details</t:pagelink></td>
+					
+					
+				</tr>
+			</tbody>
+	</table>
+</body>
+
+ 
+
+</html>

@@ -1,0 +1,39 @@
+<html t:type="layout" title="Home"
+      t:sidebarTitle="Content"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+
+ 
+
+	
+    <!-- A Zone is a component that can be updated in place, triggered by other components. -->
+    <t:zone t:id="zone">
+        <p>
+            <strong>Welcome to online pharmacy!</strong>
+        </p>
+        <p>Current status: ${currentstatus}</p>
+
+
+    </t:zone>
+
+    <p:sidebar>
+       
+
+	<p><t:pagelink page="account/Registraton">User Registration</t:pagelink></p>
+	<p><t:pagelink page="products/AddProduct">Add Products</t:pagelink></p>
+	<p><t:pagelink page="products/ShowProducts">View Products</t:pagelink></p>
+	<p><t:pagelink page="category/AddCategory">Add Category</t:pagelink></p>
+	<p><t:pagelink page="category/ShowCategory">Show Category</t:pagelink></p>
+	<p><t:pagelink page="manufacturers/AddManufacturer">Add Manufacturer</t:pagelink></p>
+	<p><t:pagelink page="manufacturers/ShowManufacturer">Show Manufacturer</t:pagelink></p>
+	<!--<p><t:pagelink page="review/AddReview">Add Review</t:pagelink></p>
+	<p><t:pagelink page="test/AddTest">Add Test</t:pagelink></p>
+	<p><t:pagelink page="test/ShowTest">Show Test</t:pagelink></p>  
+	<p><t:pagelink page="buyer/AddBuyer">Add Buyer</t:pagelink></p>
+	<p><t:pagelink page="buyer/ShowBuyer">Show Buyer</t:pagelink></p>-->
+        
+    </p:sidebar>
+
+</html>

@@ -1,0 +1,8 @@
+    		<html t:type="layout" title="User registration"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+      <h1 class="title">Register user</h1>
+    		<t:beaneditform t:id="users" object="users"/>
+
+</html>
