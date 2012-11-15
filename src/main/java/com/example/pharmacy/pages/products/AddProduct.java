@@ -25,7 +25,7 @@ public class AddProduct {
 	@CommitAfter
 	Object onSuccess() {
 		session.save(product);
-		manager.info("Product is saved!!!");
+		manager.info("Product is saved!");
 		return null;
 
 	}
