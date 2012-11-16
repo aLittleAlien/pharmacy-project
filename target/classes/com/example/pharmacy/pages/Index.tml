@@ -14,14 +14,19 @@
             <strong>Welcome to online pharmacy!</strong>
         </p>
         <p>Current status: ${currentstatus}</p>
-
+        
+	<p>
+    		Logged user: ${user.username}
+        </p>
 
     </t:zone>
+    
+
 
     <p:sidebar>
        
-
-	<p>[<t:pagelink page="account/Registraton">Registration</t:pagelink>]</p>
+	<p>[<t:pagelink page="account/Login">Login</t:pagelink>]
+	[<t:pagelink page="account/Registraton">Registration</t:pagelink>]</p>
 	<p>[<t:pagelink page="products/AddProduct">Add Products</t:pagelink>]
 	[<t:pagelink page="products/ShowProducts">View Products</t:pagelink>]</p>
 	<p>[<t:pagelink page="category/AddCategory">Add Category</t:pagelink>]
