@@ -38,6 +38,7 @@
 	<p><t:pagelink page="test/ShowTest">Show Test</t:pagelink></p>  
 	<p><t:pagelink page="buyer/AddBuyer">Add Buyer</t:pagelink></p>
 	<p><t:pagelink page="buyer/ShowBuyer">Show Buyer</t:pagelink></p>-->
+	<p>[<t:pagelink page="account/Logout">Logout</t:pagelink>]</p>
         
     </p:sidebar>
 
