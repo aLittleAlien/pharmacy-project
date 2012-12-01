@@ -36,6 +36,9 @@
                 </tr>
             </table>
         </t:form>
+        <p>
+            <a href="#" t:type="PageLink" t:page="account/Registraton">Or register</a>
+        </p>
        
     </body>
 </html>

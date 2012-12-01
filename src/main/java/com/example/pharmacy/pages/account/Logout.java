@@ -17,8 +17,9 @@ public class Logout {
 	}
 	
 	Object onActivate() {
+		Class nextpage = Index.class;
 		user = null;
-		return Index.class;
+		return nextpage;
 	}
 
 }
