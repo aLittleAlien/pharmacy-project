@@ -19,7 +19,7 @@ public class Test {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@NonVisual
-	@Column(name = "id")
+	@Column(name = "test_id")
 	private Long id;
 	@Validate("required")
 	@Column(name = "name")

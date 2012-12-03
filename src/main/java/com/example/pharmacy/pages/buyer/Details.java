@@ -23,4 +23,5 @@ public class Details {
 		return session.createCriteria(Buyer.class).list();
 	}
 
+
 }

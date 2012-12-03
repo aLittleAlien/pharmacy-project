@@ -35,9 +35,9 @@
 	[<t:pagelink page="manufacturers/ShowManufacturer">Show Manufacturer</t:pagelink>]</p>
 	<!--<p><t:pagelink page="review/AddReview">Add Review</t:pagelink></p>
 	<p><t:pagelink page="test/AddTest">Add Test</t:pagelink></p>
-	<p><t:pagelink page="test/ShowTest">Show Test</t:pagelink></p>  
+	<p><t:pagelink page="test/ShowTest">Show Test</t:pagelink></p>-->  
 	<p><t:pagelink page="buyer/AddBuyer">Add Buyer</t:pagelink></p>
-	<p><t:pagelink page="buyer/ShowBuyer">Show Buyer</t:pagelink></p>-->
+	<p><t:pagelink page="buyer/ShowBuyer">Show Buyer</t:pagelink></p>
 	<p>[<t:pagelink page="account/Logout">Logout</t:pagelink>]</p>
         
     </p:sidebar>

@@ -4,8 +4,9 @@
       xmlns:p="tapestry:parameter">
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 <body>
-	<table border="1">
-		<thead>
+<h1>Details</h1>
+<table border="0">
+		<!-- <thead>
 				<tr>
 					<th>Id</th>
 					<th>First Name</th>
@@ -17,24 +18,28 @@
 					<th>About me</th>
 
 				</tr>
-			</thead>
+			</thead> -->
 			<tbody>
 				<tr t:type="Loop" t:source="buyers" t:value="buyer">
-					<td>${buyer.id}</td>
-					<td>${buyer.name}</td>
-					<td>${buyer.lastname}</td>
-					<td>${buyer.username}</td>
-					<td>${buyer.password}</td>
-					<td>${buyer.email}</td>
-					<td>${buyer.age}</td>
-					<td>${buyer.aboutMe}</td>
-					<td></td>
+					<!-- <td>${buyer.id}</td> -->
+					<tr><th>First Name</th><td>${buyer.name}</td></tr>
+					
+					<tr><th>Last Name</th><td>${buyer.lastname}</td></tr>
+					<tr><th>Username</th><td>${buyer.username}</td></tr>
+					<tr><th>Password</th><td>${buyer.password}</td></tr>
+					<tr><th>Email</th><td>${buyer.email}</td></tr>
+					<tr><th>Age</th><td>${buyer.age}</td></tr>
+					<tr><th>About me</th><td>${buyer.aboutMe}</td></tr>
+					
 					
 					
 				</tr>
 			</tbody>
 	</table>
+
+	
 </body>
+
 
  
 

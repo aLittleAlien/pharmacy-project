@@ -17,7 +17,7 @@ public class Buyer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@NonVisual
-	@Column(name="id")
+	@Column(name="buyer_id")
 	private Long id;
 	
 	@Validate("required")

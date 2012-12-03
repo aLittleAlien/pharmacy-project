@@ -19,7 +19,7 @@ public class Products {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "product_id")
 	@NonVisual
 	private Long id;
 	@Validate("required")
