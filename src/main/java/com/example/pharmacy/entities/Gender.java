@@ -1,4 +1,4 @@
-package com.example.pharmacy.model.type;
+package com.example.pharmacy.entities;
 
 public enum Gender {
 	

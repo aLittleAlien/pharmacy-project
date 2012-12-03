@@ -10,6 +10,7 @@ import javax.persistence.Table;
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
+
 @Entity
 @Table(name = "user")
 public class User {
@@ -25,9 +26,7 @@ public class User {
 	@Column(name = "user_password", nullable = false)
 	private String password;
 	@Column(name = "user_gender")
-	private String gender;
-	@Column(name = "user_subscribe")
-	private boolean subscribe;
+	private Gender gender;
 	@Column(name = "user_email")
 	private String email;
 	@Column(name = "user_country")
@@ -59,20 +58,13 @@ public class User {
 		this.password = password;
 	}
 
-	public String getGender() {
+	public Gender getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
-	}
-
-	public boolean isSubscribe() {
-		return subscribe;
-	}
-
-	public void setSubscribe(boolean subscribe) {
-		this.subscribe = subscribe;
+	
 	}
 
 	public String getEmail() {
