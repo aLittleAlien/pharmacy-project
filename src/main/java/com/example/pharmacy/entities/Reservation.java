@@ -18,38 +18,20 @@ import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
 @Entity
-@Table(name = "review")
-public class Review {
-
+@Table(name = "reservation")
+public class Reservation {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@NonVisual
-	@Column(name = "review_id")
+	@Column(name = "reservation_id")
 	private Long id;
 	@Validate("required")
-	@Column(name = "comment", nullable = false)
-	private String comment;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	@Validate("required")
 	@ManyToOne(cascade = CascadeType.ALL, optional = false)
-	@JoinColumn(name = "review_user_id")
+	@JoinColumn(name = "reservation_user_id")
 	private User user;
 	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "order_product", joinColumns = { @JoinColumn(name = "review_id") }, inverseJoinColumns = { @JoinColumn(name = "product_id") })
+	@JoinTable(name = "res_product", joinColumns = { @JoinColumn(name = "reservation_id") }, inverseJoinColumns = { @JoinColumn(name = "product_id") })
 	private Set<Products> products;
 
 	public Long getId() {
@@ -60,13 +42,6 @@ public class Review {
 		this.id = id;
 	}
 
-	public String getComment() {
-		return comment;
-	}
-
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
 
 	public User getUser() {
 		return user;

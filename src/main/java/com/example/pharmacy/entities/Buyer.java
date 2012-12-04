@@ -17,30 +17,30 @@ public class Buyer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@NonVisual
-	@Column(name="buyer_id")
+	@Column(name="buyer_id", nullable = false)
 	private Long id;
 	
 	@Validate("required")
-	@Column(name="name")
+	@Column(name="name" , nullable = false)
 	private String name;
 	
 	@Validate("required")
-	@Column(name="lastname")
+	@Column(name="lastname" , nullable = false)
 	private String lastname;
 	
 	@Validate("email, required")
-	@Column(name="email")
+	@Column(name="email", nullable = false)
 	private String email;
 	
 	@Validate("required")
-	@Column(name="username")
+	@Column(name="username" , nullable = false)
 	private String username;
 	
 	@Validate("required")
-	@Column(name="password")
+	@Column(name="password" , nullable = false)
 	private String password;
 	
-	@Column(name="age")
+	@Column(name="age", nullable = false)
 	private int age;
 	private String aboutMe;
 

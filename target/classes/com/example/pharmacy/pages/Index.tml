@@ -25,19 +25,16 @@
 
     <p:sidebar>
        
-	<p>[<t:pagelink page="account/Login">Login</t:pagelink>]
-	[<t:pagelink page="account/Registraton">Registration</t:pagelink>]</p>
+	<!-- [<t:pagelink page="account/Login">Login</t:pagelink>]
+	<p>[<t:pagelink page="account/Registraton">Registration</t:pagelink>]</p> -->
 	<p>[<t:pagelink page="products/AddProduct">Add Products</t:pagelink>]
 	[<t:pagelink page="products/ShowProducts">View Products</t:pagelink>]</p>
 	<p>[<t:pagelink page="category/AddCategory">Add Category</t:pagelink>]
 	[<t:pagelink page="category/ShowCategory">Show Category</t:pagelink>]</p>
 	<p>[<t:pagelink page="manufacturers/AddManufacturer">Add Manufacturer</t:pagelink>]
 	[<t:pagelink page="manufacturers/ShowManufacturer">Show Manufacturer</t:pagelink>]</p>
-	<!--<p><t:pagelink page="review/AddReview">Add Review</t:pagelink></p>
-	<p><t:pagelink page="test/AddTest">Add Test</t:pagelink></p>
-	<p><t:pagelink page="test/ShowTest">Show Test</t:pagelink></p>-->  
-	<p><t:pagelink page="buyer/AddBuyer">Add Buyer</t:pagelink></p>
-	<p><t:pagelink page="buyer/ShowBuyer">Show Buyer</t:pagelink></p>
+	<p>[<t:pagelink page="reservation/AddReservation">Add Reservation</t:pagelink>]
+	[<t:pagelink page="reservation/ShowReservation">View Reservation</t:pagelink>]</p>
 	<p>[<t:pagelink page="account/Logout">Logout</t:pagelink>]</p>
         
     </p:sidebar>

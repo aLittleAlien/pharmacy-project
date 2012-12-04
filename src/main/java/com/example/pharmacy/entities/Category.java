@@ -11,7 +11,7 @@ import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
 @Entity
-@Table(name="category")
+@Table(name = "category")
 public class Category {
 
 	@Id
@@ -22,18 +22,21 @@ public class Category {
 	@Validate("required")
 	@Column(nullable = false, name = "name")
 	private String name;
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
+
 }

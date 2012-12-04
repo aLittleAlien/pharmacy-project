@@ -15,7 +15,7 @@ import com.example.pharmacy.pages.account.Login;
 /**
  * Start page of application pharmacy.
  */
-public class Index
+public class Index extends Base
 {
     @Property
     @Inject

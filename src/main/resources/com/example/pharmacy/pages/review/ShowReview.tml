@@ -1,0 +1,50 @@
+<html t:type="layout" title="Browse Borrow" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+   <!-- <t:grid t:source="reviewsCollection" pagerPosition="top" row="rowReview" add="user">
+       
+        <t:parameter name="UserCell">
+            ${rowReview.user.username}
+        </t:parameter>
+
+       
+    </t:grid>-->
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Comment</th>
+			<th>User</th>
+			<th>Product</th>
+		</tr>
+	 <t:loop source="reviewsCollection" value="rowReview">
+	 	<tr>
+	 		<td>${rowReview.id}</td>
+			<td>${rowReview.comment}</td>
+			<td>${rowReview.user.username}</td>
+			<td>
+		<table>
+			<t:loop source="rowReview.products" value="rowProducts">
+				
+				<tr>
+					<td>
+					${rowProducts.name}</td>
+				</tr>
+			</t:loop>
+		</table>
+		</td>
+	 	</tr>
+		<!-- <tr>
+			<td>Products:</td>
+			<td>
+		<table>
+			<t:loop source="rowReview.products" value="rowProducts">
+				
+				<tr>
+					<td>
+					${rowProducts.name}</td>
+				</tr>
+			</t:loop>
+		</table>
+		</td>
+		</tr> -->
+	 </t:loop>
+	 </table>
+</html>

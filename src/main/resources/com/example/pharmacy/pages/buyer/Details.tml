@@ -40,7 +40,7 @@
 	
 </body>
 
-
+<t:beandisplay t:id="buyer" object="buyer"/>
  
 
 </html>

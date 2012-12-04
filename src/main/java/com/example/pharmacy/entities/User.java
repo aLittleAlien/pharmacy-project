@@ -25,13 +25,13 @@ public class User {
 	@Validate("required")
 	@Column(name = "user_password", nullable = false)
 	private String password;
-	@Column(name = "user_gender")
+	@Column(name = "user_gender", nullable = false)
 	private Gender gender;
-	@Column(name = "user_email")
+	@Column(name = "user_email", nullable = false)
 	private String email;
-	@Column(name = "user_country")
+	@Column(name = "user_country", nullable = false)
 	private String country;
-	@Column(name = "user_age")
+	@Column(name = "user_age", nullable = false)
 	private double age;
 
 	public Long getId() {

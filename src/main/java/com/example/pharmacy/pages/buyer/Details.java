@@ -9,19 +9,30 @@ import org.apache.tapestry5.annotations.Property;
 import org.hibernate.Session;
 
 import com.example.pharmacy.entities.Buyer;
+import com.example.pharmacy.pages.Base;
 
-public class Details {
+public class Details extends Base{
 	
-	@Inject
-	private Session session;
+//	@Inject
+//	private Session session;
 	
 	@Persist
-	@Property
+//	@Property
 	private Buyer buyer;
-	
-	public List<Buyer> getBuyers() {
-		return session.createCriteria(Buyer.class).list();
+
+	public Buyer getBuyer() {
+		return buyer;
 	}
+
+	public void setBuyer(Buyer buyer) {
+		this.buyer = buyer;
+	}
+	
+//	public List<Buyer> getBuyers() {
+//		return session.createCriteria(Buyer.class).list();
+//	}
+	
+	
 
 
 }

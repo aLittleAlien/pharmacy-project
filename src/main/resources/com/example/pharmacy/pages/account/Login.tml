@@ -1,4 +1,4 @@
-<html t:type="layout" title="Login"
+<html t:type="layout" title=""
       t:sidebarTitle="Framework Version"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
@@ -7,6 +7,7 @@
     </head>
     <body>
         <h1>Login</h1>
+        <p>
 
         <t:form t:id="loginForm">
         	<t:errors/>
@@ -39,6 +40,6 @@
         <p>
             <a href="#" t:type="PageLink" t:page="account/Registraton">Or register</a>
         </p>
-       
+       </p>
     </body>
 </html>

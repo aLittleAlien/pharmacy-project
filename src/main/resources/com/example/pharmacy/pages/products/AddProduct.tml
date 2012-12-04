@@ -1,9 +1,22 @@
-<html t:type="layout" title="Home"
-      t:sidebarTitle="Content"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-      xmlns:p="tapestry:parameter">
-        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+<html t:type="layout" title="Home" t:sidebarTitle="Content"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+	<!-- Most of the page content, including <head>, <body>, etc. tags, comes 
+		from Layout.tml -->
 
-	<t:beaneditform object="product" submitLabel="Add"/>
+	<t:beaneditform object="product" submitLabel="Add" add="category, manufacturer"
+		reorder="name, code, category,manufacturer,price">
+		<p:category>
+			<t:label for="category">Category</t:label>
+			<t:select t:id="category" t:model="categoryModel" t:value="selectedCategory"
+				t:encoder="categoryEncoder" />
+		</p:category>
+		
+		<p:manufacturer>
+			<t:label for="manufacturer">Manufacturer</t:label>
+			<t:select t:id="manufacturer" t:model="manufacturerModel" t:value="selectedManufacturer"
+				t:encoder="manufacturerEncoder" />
+		</p:manufacturer>
+
+	</t:beaneditform>
 
 </html>

@@ -2,7 +2,19 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
       
-      <h1 class="title">Add Review</h1>
-    		<t:beaneditform t:id="review" object="review"/>
+    		<p>Please select products</p>
+  <t:grid source="products" row="rowProducts">
+    	 <p:nameCell>
+             <a t:type="actionlink" t:id="selectedProduct" context="rowProducts.id">${rowProducts.name}</a>
+        </p:nameCell> 
+    </t:grid>
+	<t:beaneditform t:id="review" object="review" add="user">
+		<p:user>
+			<t:label for="user">User</t:label>
+			<t:select t:id="user" t:model="userModel" t:value="selectedUser" 
+			 t:encoder="userEncoder"/>
+		</p:user>
+			 
+	</t:beaneditform>
 
 </html>

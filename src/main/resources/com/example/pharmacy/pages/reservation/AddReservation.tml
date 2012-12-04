@@ -1,0 +1,41 @@
+    		<html t:type="layout" title=""
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      <h1>Order products</h1>
+      <p></p>
+      <p>Please select products</p>
+      
+      <table border="1">
+		<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Code</th>
+					<th>Category</th>
+					<th>Manufacturer</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr t:type="Loop" t:source="products" t:value="rowProducts">
+					<td>${rowProducts.id}</td>
+					<td><a t:type="actionlink" t:id="selectedProduct" context="rowProducts.id">${rowProducts.name}</a></td>
+					<td>${rowProducts.code}</td>
+					<td>${rowProducts.category.name}</td>
+					<td>${rowProducts.manufacturer.name}</td>
+					<td>${rowProducts.price}</td>
+					
+					
+				</tr>
+			</tbody>
+	</table>
+	<t:beaneditform t:id="reservation" submitLabel="Order" object="reservation" add="user">
+		<p:user>
+			<t:label for="user">User</t:label>
+			<t:select t:id="user" t:model="userModel" t:value="selectedUser" 
+			 t:encoder="userEncoder"/>
+		</p:user>
+			 
+	</t:beaneditform>
+
+</html>

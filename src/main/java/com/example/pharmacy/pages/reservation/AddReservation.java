@@ -1,4 +1,4 @@
-package com.example.pharmacy.pages.review;
+package com.example.pharmacy.pages.reservation;
 
 import java.util.HashSet;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.apache.tapestry5.SelectModel;
 import org.apache.tapestry5.ValueEncoder;
+import org.apache.tapestry5.alerts.AlertManager;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Persist;
@@ -15,22 +16,19 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.hibernate.Session;
 
 import com.example.pharmacy.entities.Products;
-import com.example.pharmacy.entities.Review;
+import com.example.pharmacy.entities.Reservation;
 import com.example.pharmacy.entities.User;
 import com.example.pharmacy.model.lov.user.UserEncoder;
 import com.example.pharmacy.model.lov.user.UserSelectModel;
-import com.example.pharmacy.pages.Index;
 
-
-
-public class AddReview {
+public class AddReservation {
 	
 	@Inject
 	private Session session;
 	@Property
-	private Review review;
+	private Reservation reservation;
 	@InjectPage
-	private Index index;
+	private ShowReservation showRes;
 	@Property
 	private Set<Products> selectedProduct=new HashSet<Products>(0);; 
 	@Property
@@ -38,6 +36,8 @@ public class AddReview {
 	@Persist
 	@Property
 	private User selectedUser;
+	@Inject
+	private AlertManager manager;
 
 
 	public SelectModel getUserModel() {
@@ -64,16 +64,14 @@ public class AddReview {
 
 	@CommitAfter
 	Object onSuccess() {
-		String co = review.getComment();
-		review = new Review();
-		review.setComment(co);
-		review.setUser(selectedUser);
-		review.setProducts(selectedProduct);
-		session.save(review);
+		reservation = new Reservation();
+		reservation.setUser(selectedUser);
+		reservation.setProducts(selectedProduct);
+		session.save(reservation);
+		manager.info("You ordered product(s)");
 		this.selectedUser = null;
 		this.selectedProduct = null;
-
-		return index;
+		return showRes;
 	}
 
 }

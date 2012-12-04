@@ -1,0 +1,28 @@
+<html t:type="layout" title="" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<h1>Reservation</h1>
+	<p></p>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>User</th>
+			<th>Product</th>
+		</tr>
+	 <t:loop source="reservationsCollection" value="rowReservation">
+	 	<tr>
+	 		<td>${rowReservation.id}</td>
+			<td>${rowReservation.user.username}</td>
+			<td>
+		<table>
+			<t:loop source="rowReservation.products" value="rowProducts">
+				
+				<tr>
+					<td>
+					${rowProducts.name}</td>
+				</tr>
+			</t:loop>
+		</table>
+		</td>
+	 	</tr>
+	 </t:loop>
+	 </table>
+</html>
