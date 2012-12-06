@@ -10,7 +10,6 @@ import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.hibernate.Session;
 
 import com.example.pharmacy.entities.Buyer;
-import com.example.pharmacy.entities.Test;
 
 public class ShowBuyer {
 	
